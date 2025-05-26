@@ -117,7 +117,16 @@
   <section id="contact" class="py-20 px-6 bg-white">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
-      <p class="mb-6">Reach out via email at <a href="mailto:your.email@example.com" class="text-blue-600">your.email@example.com</a> or connect on <a href="https://www.linkedin.com/in/yourprofile" class="text-blue-600">LinkedIn</a>.</p>
+      <div class="mt-4">
+        <button id="reveal-email" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Click to Decode Email</button>
+        <p id="decoded-email" class="mt-4 text-lg text-green-700 font-semibold"></p>
+      </div>
+      <script>
+        document.getElementById('reveal-email').addEventListener('click', function() {
+          const decoded = atob('Y2hhbXVsOTFAZ21haWwuY29t');
+          document.getElementById('decoded-email').textContent = decoded;
+        });
+      </script> or connect on <a href="https://www.linkedin.com/in/amul-cherukuri/" class="text-blue-600">LinkedIn</a>.</p>
     </div>
   </section>
 </body>
